@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_template/features/home/application/timer_bloc.dart';
-import '../../features/home/application/ticker.dart';
-import '../../features/profile/application/counter_cubit.dart';
-import 'routing/app_router.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../features/startup/application/splash_bloc.dart';
+import '../../../features/home/application/ticker.dart';
+import '../../../features/home/application/timer_bloc.dart';
+import '../../../features/profile/application/counter_cubit.dart';
+import '../../../features/startup/application/splash_bloc.dart';
+import '../routing/app_router.dart';
 
 Future<void> initDependencies() async {
   /// We need to add a try catch bloc because this can be called twice, when the scope is already registered the SL will
@@ -44,7 +44,7 @@ Future<void> initBlocs() async {
       }
 
       if (!sl.isRegistered<TimerBloc>()) {
-        sl.registerFactory<TimerBloc>(() => TimerBloc(ticker: Ticker()));
+        sl.registerFactory<TimerBloc>(() => TimerBloc(ticker: const Ticker()));
       }
 
       if (!sl.isRegistered<CounterCubit>()) {

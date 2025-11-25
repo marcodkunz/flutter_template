@@ -2,6 +2,7 @@ part of 'timer_bloc.dart';
 
 sealed class TimerState extends Equatable {
   const TimerState(this.duration);
+
   final int duration;
 
   @override

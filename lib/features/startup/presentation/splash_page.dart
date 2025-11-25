@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../shared/presentation/previews/multi_brightness_preview.dart';
 
-@MultiBrightnessPreview(size: Size(300,600))
+@MultiBrightnessPreview(size: Size(300, 600))
 Widget preview() => const SplashPage();
 
 class SplashPage extends StatelessWidget {
@@ -10,9 +10,6 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.primary,
-      body: Center(child: CircularProgressIndicator()),
-    );
+    return const Scaffold(body: Center(child: CircularProgressIndicator()));
   }
 }

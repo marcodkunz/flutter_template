@@ -8,4 +8,5 @@ sealed class SplashState extends Equatable {
 }
 
 final class SplashInitial extends SplashState {}
+
 final class SplashLoading extends SplashState {}

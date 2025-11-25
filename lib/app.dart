@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'core/application/di/service_locator.dart';
 import 'core/application/routing/app_router.dart';
-import 'core/application/service_locator.dart';
 import 'core/presentation/theme/app_colors.dart';
 import 'core/presentation/theme/theme.dart';
 import 'l10n/app_localizations.dart';

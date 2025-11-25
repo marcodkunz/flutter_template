@@ -1,16 +1,13 @@
-
 import 'package:equatable/equatable.dart';
 
 class Pages {
   static const String _splash = 'splash';
-  static const String _todo = 'todo';
   static const String _home = 'home';
   static const String _profile = 'profile';
 
   static PageInfo root = const PageInfo(path: '/', name: 'root');
 
   static PageInfo splash = PageInfo(path: _splash, name: _splash, navigationParent: root);
-  static PageInfo todo = PageInfo(path: _todo, name: _todo, navigationParent: root);
   static PageInfo home = PageInfo(path: _home, name: _home, navigationParent: root);
   static PageInfo profile = PageInfo(path: _profile, name: _profile, navigationParent: root);
 }

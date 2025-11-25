@@ -6,6 +6,7 @@ sealed class TimerEvent {
 
 final class TimerStarted extends TimerEvent {
   const TimerStarted({required this.duration});
+
   final int duration;
 }
 
@@ -23,5 +24,6 @@ class TimerReset extends TimerEvent {
 
 class _TimerTicked extends TimerEvent {
   const _TimerTicked({required this.duration});
+
   final int duration;
 }

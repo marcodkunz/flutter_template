@@ -7,7 +7,6 @@ import '../../../core/application/routing/app_router.dart';
 import '../../../core/application/routing/page.dart';
 
 part 'splash_event.dart';
-
 part 'splash_state.dart';
 
 class SplashBloc extends Bloc<SplashEvent, SplashState> {

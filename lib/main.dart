@@ -3,16 +3,16 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_template/core/application/bloc_logger.dart';
 
+import '../../../core/application/bloc_logger.dart';
 import 'app.dart';
-import 'core/application/di_core.dart';
+import 'core/application/di/di_core.dart';
 
 Future<void> main() async {
   await runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
 
-    Bloc.observer = const BlocLogger();
+    Bloc.observer = const BlocLogger(verbose: true);
 
     await initDependencies();
     // to catch flutter sdk framework errors
