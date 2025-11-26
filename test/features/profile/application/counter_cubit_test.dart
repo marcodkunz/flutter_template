@@ -22,8 +22,11 @@ void main() {
     blocTest<CounterCubit, int>(
       'should emit [-1] when decrement is called',
       build: () => cubit,
-      act: (cubit) => cubit.decrement(),
-      expect: () => <int>[-1],
+      act: (cubit) {
+        cubit.decrement();
+        cubit.increment();
+      },
+      expect: () => <int>[-1, 0],
     );
   });
 }
