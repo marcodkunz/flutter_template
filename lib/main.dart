@@ -12,7 +12,7 @@ Future<void> main() async {
   await runZonedGuarded(() async {
     WidgetsFlutterBinding.ensureInitialized();
 
-    Bloc.observer = const BlocLogger(verbose: true);
+    Bloc.observer = const BlocLogger(verbose: kDebugMode);
 
     await initDependencies();
     // to catch flutter sdk framework errors
