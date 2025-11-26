@@ -10,7 +10,9 @@ part 'splash_event.dart';
 part 'splash_state.dart';
 
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
-  SplashBloc({required AppRouter appRouter}) : _appRouter = appRouter, super(SplashInitial()) {
+  SplashBloc({required AppRouter appRouter})
+    : _appRouter = appRouter,
+      super(SplashInitial()) {
     on<SplashCheck>(_onCheck);
   }
 

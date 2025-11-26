@@ -12,7 +12,10 @@ class ProfilePage extends StatelessWidget {
       body: Center(
         child: BlocBuilder<CounterCubit, int>(
           builder: (context, state) {
-            return Text('$state', style: Theme.of(context).textTheme.displayMedium);
+            return Text(
+              '$state',
+              style: Theme.of(context).textTheme.displayMedium,
+            );
           },
         ),
       ),
