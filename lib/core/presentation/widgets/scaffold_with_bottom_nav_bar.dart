@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
-final GlobalKey<ScaffoldState> globalAppScaffoldKey =
-    GlobalKey<ScaffoldState>();
+final GlobalKey<ScaffoldState> globalAppScaffoldKey = GlobalKey<ScaffoldState>();
 
 class ScaffoldWithBottomNavBar extends StatelessWidget {
   /// Constructs an [ScaffoldWithBottomNavBar].
@@ -33,16 +32,8 @@ class ScaffoldWithBottomNavBar extends StatelessWidget {
       bottomNavigationBar: NavigationBar(
         selectedIndex: navigationShell.currentIndex,
         destinations: const [
-          NavigationDestination(
-            label: 'Home',
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home),
-          ),
-          NavigationDestination(
-            label: 'Profile',
-            icon: Icon(Icons.verified_user_outlined),
-            selectedIcon: Icon(Icons.verified_user),
-          ),
+          NavigationDestination(label: 'Home', icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home)),
+          NavigationDestination(label: 'Profile', icon: Icon(Icons.verified_user_outlined), selectedIcon: Icon(Icons.verified_user)),
         ],
         onDestinationSelected: _goBranch,
       ),

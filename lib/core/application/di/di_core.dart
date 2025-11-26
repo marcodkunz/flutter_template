@@ -40,9 +40,7 @@ Future<void> initBlocs() async {
     scopeName: 'SLBlocs',
     init: (scope) async {
       if (!sl.isRegistered<SplashBloc>()) {
-        sl.registerFactory<SplashBloc>(
-          () => SplashBloc(appRouter: sl<AppRouter>()),
-        );
+        sl.registerFactory<SplashBloc>(() => SplashBloc(appRouter: sl<AppRouter>()));
       }
 
       if (!sl.isRegistered<TimerBloc>()) {
